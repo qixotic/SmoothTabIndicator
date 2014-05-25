@@ -46,7 +46,7 @@ import com.astuetz.pagerslidingtabstrip.R;
 public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 	public interface IconTabProvider {
-		public int getPageIconResId(int position);sss
+		public int getPageIconResId(int position);
 	}
 
 	// @formatter:off
@@ -89,6 +89,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 	private int tabTextSize = 12;
 	private int tabTextColor = 0xFF666666;
+	private int tabTextColorSec = 0x66666666;
 	private Typeface tabTypeface = null;
 	private int tabTypefaceStyle = Typeface.BOLD;
 

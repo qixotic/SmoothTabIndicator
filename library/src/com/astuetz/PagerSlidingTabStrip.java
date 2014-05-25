@@ -33,6 +33,7 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
@@ -171,6 +172,15 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 		defaultTabLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
 		expandedTabLayoutParams = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1.0f);
 
+		
+		// Init screenWidthPixels
+		DisplayMetrics metrics = new DisplayMetrics();
+		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+		wm.getDefaultDisplay().getMetrics(metrics);
+		screenWidthPixels = metrics.widthPixels;
+		
+		
+		
 		if (locale == null) {
 			locale = getResources().getConfiguration().locale;
 		}

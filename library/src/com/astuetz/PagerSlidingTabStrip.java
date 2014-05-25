@@ -69,6 +69,11 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 	private int currentPosition = 0;
 	private float currentPositionOffset = 0f;
+	
+	private int prevPosOffsetPixelsAbs = 0;
+	private int screenWidthPixels = 0;
+	private int lastFromPosition = -1;
+	private int lastToPosition = -1;
 
 	private Paint rectPaint;
 	private Paint dividerPaint;
@@ -358,6 +363,10 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 			currentPosition = position;
 			currentPositionOffset = positionOffset;
+			
+			
+			int curPosOffsetPixelsAbs = position * screenWidthPixels
+					+ positionOffsetPixels;
 
 			scrollToChild(position, (int) (positionOffset * tabsContainer.getChildAt(position).getWidth()));
 

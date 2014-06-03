@@ -1,4 +1,6 @@
-# Android PagerSlidingTabStrip
+# Android PagerSlidingTabStrip - SmoothTabIndicator
+
+This project is forked from Andreas Stuetz's original project. All I wanted to do in the first place was to add some smooth transition effects to the text and icon indicators in the tab bar. The current sliding strip in apps like Google Play Store looks well, but the texts in the tab bar are of the same color, which can be further improved.
 
 Interactive paging indicator widget, compatible with the `ViewPager` from the 
 Android Support Library. 
@@ -74,17 +76,16 @@ your brand:
 
 # Developed By
 
- * Andreas Stuetz - <andreas.stuetz@gmail.com>
+ * [Sida Wang](https://plus.google.com/109139605868523362059)
 
 
 ### Credits
 
- * [Kirill Grouchnikov](https://plus.google.com/108761828584265913206/posts) - Author of [an explanation post on Google+](https://plus.google.com/108761828584265913206/posts/Cwk7joBV3AC)
-
+ * [Andreas Stuetz](andreas.stuetz@gmail.com) - Author of [PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip)
 
 # License
 
-    Copyright 2013 Andreas Stuetz
+    Copyright 2014 Sida Wang
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

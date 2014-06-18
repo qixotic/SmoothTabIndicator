@@ -5,7 +5,7 @@ This project is forked from Andreas Stuetz's PagerSlidingTabStrip project. What 
 
 You may download the demo here [on the Play Store](https://play.google.com/store/apps/details?id=com.astuetz.viewpager.extensions.sample).
 
-![Demo 1](http://i.imgur.com/ragfOnm.gif)![PagerSlidingTabStrip Sample Screenshot 2](https://lh3.ggpht.com/oaksDoUcQlGB4j7VEkBCOjrvSzjtzVHHcKq8pAnGVfm6oxkcJg_w1QS4tyP3fLcqrwcX)
+<img width="320" src="http://i.imgur.com/ragfOnm.gif" /><img width="320" src="http://i.imgur.com/CslJhOD.gif" />
 
 # Usage
 

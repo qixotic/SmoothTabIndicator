@@ -1,13 +1,23 @@
-# Android PagerSlidingTabStrip
+# Android SmoothTabIndicator
 
-Interactive paging indicator widget, compatible with the `ViewPager` from the 
-Android Support Library. 
+This project is forked from Andreas Stuetz's PagerSlidingTabStrip project. What I've done is adding some smooth transition effects to the text and icon indicators in the tab bar. The current sliding strip in apps like Google Play Store looks well, but the texts in the tab bar are of the same color and don't respond to user's scroll gesture, which can be further improved.
 
-Try out the sample application [on the Play Store](https://play.google.com/store/apps/details?id=com.astuetz.viewpager.extensions.sample).
+
+You may download the demo here [on the Play Store](https://play.google.com/store/apps/details?id=com.astuetz.viewpager.extensions.sample).
 
 ![PagerSlidingTabStrip Sample Screenshot 1](https://lh3.ggpht.com/PXS7EmHhQZdT1Oa379iy91HX3ByWAQnFZAthMAFa_QHAOHNClEaXU5nxDEAj1F2eqbk)![PagerSlidingTabStrip Sample Screenshot 2](https://lh3.ggpht.com/oaksDoUcQlGB4j7VEkBCOjrvSzjtzVHHcKq8pAnGVfm6oxkcJg_w1QS4tyP3fLcqrwcX)
 
 # Usage
+
+The usage of this project is almost the same as the original PagerSlidingTabStrip. Except that I'm not familiar with gradle, so if you are using eclipse or ADT as your building tool, you may need to download the code, import the project from `library/` folder as a library project and use this project as library in your own project.
+
+If gradle is your only building tool, you may refer to the "sample" project in the `sample/` folder, which simply added the following code to the build script:
+
+        dependencies {
+            compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+        }
+        
+For your convenience, here is the usage from the original PagerSlidingTabStrip project:
 
 *For a working implementation of this project see the `sample/` folder.*
 
@@ -61,30 +71,18 @@ your brand:
 
 *All attributes have their respective getters and setters to change them at runtime*
 
-# Changelog
-
-### Current Version: 1.0.1
-
-### [1.0.1](https://github.com/astuetz/PagerSlidingTabStrip/tree/v1.0.1)
-
- * Upgraded gradle build files
- * Changed package name to `com.astuetz.PagerSlidingTabStrip`
- * [#37](https://github.com/astuetz/PagerSlidingTabStrip/pull/37), [#41](https://github.com/astuetz/PagerSlidingTabStrip/pull/41) Added `psts` prefix to all attributes in `attrs.xml`
- * [#46](https://github.com/astuetz/PagerSlidingTabStrip/pull/46) Changed the shouldExpand behavior to set the layout at the time the tab is added
-
 # Developed By
 
- * Andreas Stuetz - <andreas.stuetz@gmail.com>
+ * [Sida Wang](https://plus.google.com/109139605868523362059)
 
 
 ### Credits
 
- * [Kirill Grouchnikov](https://plus.google.com/108761828584265913206/posts) - Author of [an explanation post on Google+](https://plus.google.com/108761828584265913206/posts/Cwk7joBV3AC)
-
+ * [Andreas Stuetz](andreas.stuetz@gmail.com) - Author of [PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip)
 
 # License
 
-    Copyright 2013 Andreas Stuetz
+    Copyright 2014 Sida Wang
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

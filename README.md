@@ -5,7 +5,8 @@ This project is forked from Andreas Stuetz's [PagerSlidingTabStrip](https://gith
 
 You may download the demo here [on the Play Store](https://play.google.com/store/apps/details?id=com.astuetz.viewpager.extensions.sample).
 
-<img width="320" style="margin-right: 20px;" src="http://i.imgur.com/ragfOnm.gif" /><img width="320" src="http://i.imgur.com/CslJhOD.gif" />
+<div style="margin-right: 20px;"><img width="320" src="http://i.imgur.com/ragfOnm.gif" /></div>
+<div><img width="320" src="http://i.imgur.com/CslJhOD.gif" /></div>
 
 # Usage
 

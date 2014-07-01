@@ -629,6 +629,11 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 	public void setTextColor(int textColor) {
 		this.tabTextColor = textColor;
+		this.tabTextColorSec = Color.argb(
+				Color.alpha(textColor) * 0x66 / 0xff,
+				Color.red(textColor),
+				Color.green(textColor),
+				Color.blue(textColor));
 		updateTabStyles();
 	}
 
@@ -693,6 +698,9 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 		super.onRestoreInstanceState(savedState.getSuperState());
 		currentPosition = savedState.currentPosition;
 		requestLayout();
+		
+		Log.i("DSofter", "current pos: " + currentPosition);
+		
 		updateTabStyles();
 	}
 
@@ -700,6 +708,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 	public Parcelable onSaveInstanceState() {
 		Parcelable superState = super.onSaveInstanceState();
 		SavedState savedState = new SavedState(superState);
+		currentPosition = pager.getCurrentItem();
 		savedState.currentPosition = currentPosition;
 		return savedState;
 	}

@@ -16,6 +16,7 @@
 
 package com.astuetz.viewpager.extensions.sample;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -33,7 +34,6 @@ import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
 import com.astuetz.PagerSlidingTabStrip;
 
 public class MainActivity extends FragmentActivity {
@@ -55,6 +55,11 @@ public class MainActivity extends FragmentActivity {
 		tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 		pager = (ViewPager) findViewById(R.id.pager);
 		adapter = new MyPagerAdapter(getSupportFragmentManager());
+		
+		
+		tabs.setTextColor(Color.RED);
+		tabs.setShouldExpand(true);
+		
 
 		pager.setAdapter(adapter);
 
@@ -88,6 +93,7 @@ public class MainActivity extends FragmentActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
+	@SuppressLint("NewApi")
 	private void changeColor(int newColor) {
 
 		tabs.setIndicatorColor(newColor);
@@ -157,6 +163,8 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	private Drawable.Callback drawableCallback = new Drawable.Callback() {
+		
+		@SuppressLint("NewApi")
 		@Override
 		public void invalidateDrawable(Drawable who) {
 			getActionBar().setBackgroundDrawable(who);

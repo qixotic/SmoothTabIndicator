@@ -3,8 +3,6 @@
 This project is forked from Andreas Stuetz's [PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip) project. What I've done is adding some smooth transition effects to the text and icon indicators in the tab bar. The current sliding strip in apps like Google Play Store looks well, but the texts in the tab bar are of the same color and don't respond to user's scroll gesture, which can be further improved.
 
 
-You may download the demo here [on the Play Store](https://play.google.com/store/apps/details?id=com.astuetz.viewpager.extensions.sample).
-
 <img width="320" src="http://i.imgur.com/ragfOnm.gif" />
 <img width="320" src="http://i.imgur.com/CslJhOD.gif" />
 

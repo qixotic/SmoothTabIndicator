@@ -20,7 +20,7 @@ If gradle is your only building tool, you may refer to the "sample" project in t
 
 You may also need to download the source code first. Sorry for the inconvenience. I'm learning gradle recently, and will update the usage ASAP.
 
-**For your convenience, here is the usage from the original [PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip) project:**
+**For your convenience, below is the usage from the original [PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip) project:**
 
 *For a working implementation of this project see the `sample/` folder.*
 

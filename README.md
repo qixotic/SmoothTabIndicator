@@ -12,7 +12,7 @@ This project is forked from Andreas Stuetz's [PagerSlidingTabStrip](https://gith
 
 The usage of this project is almost the same as the original [PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip) project. Except that I'm not familiar with gradle, so if you are using eclipse or ADT as your building tool, just like me, you may need to download the code, import the project from `library/` folder as a library project and use this project as library in your own project.
 
-If gradle is your only building tool, you may refer to the "sample" project in the `sample/` folder, which simply added the following code to the build script:
+If gradle is your only building tool, you may refer to the *sample* project in the `sample/` folder, which simply added the following code to the build script:
 
     dependencies {
         compile project(':library')

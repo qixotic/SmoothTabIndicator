@@ -186,15 +186,6 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 		wm.getDefaultDisplay().getMetrics(metrics);
 		screenWidthPixels = metrics.widthPixels;
 		
-
-		
-		// Init screenWidthPixels
-		DisplayMetrics metrics = new DisplayMetrics();
-		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-		wm.getDefaultDisplay().getMetrics(metrics);
-		screenWidthPixels = metrics.widthPixels;
-		
-		
 		
 		if (locale == null) {
 			locale = getResources().getConfiguration().locale;

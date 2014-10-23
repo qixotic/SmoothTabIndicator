@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *	  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -48,6 +48,7 @@ import java.util.Locale;
 import com.astuetz.pagerslidingtabstrip.R;
 
 public class PagerSlidingTabStrip extends HorizontalScrollView {
+	public static final String TAG = "DSofter";
 
 	public interface IconTabProvider {
 		public int getPageIconResId(int position);
@@ -57,7 +58,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 	private static final int[] ATTRS = new int[] {
 		android.R.attr.textSize,
 		android.R.attr.textColor
-    };
+	};
 	// @formatter:on
 
 	private LinearLayout.LayoutParams defaultTabLayoutParams;
@@ -457,8 +458,9 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 			} else {
 				logStrFormat = "%d->\"%d\"";
 			}
-			Log.i("DSofter", String.format(logStrFormat,
-					fromPosition, toPosition));
+			if (Log.isLoggable(TAG, Log.DEBUG)) {
+				Log.d(TAG, String.format(logStrFormat, fromPosition, toPosition));
+			}
 
 			
 			
@@ -470,10 +472,12 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 			if (toPosition != -1 && !overscrolled) {
 
 				if (quickscrolled) {
-					Log.i("DSofter", "quick scrolled: "
-							+ String.format("%d->%d %d->%d",
-									lastFromPosition, lastToPosition,
-									fromPosition, toPosition));
+					if (Log.isLoggable(TAG, Log.DEBUG)) {
+						Log.d(TAG, "quick scrolled: "
+										 + String.format("%d->%d %d->%d",
+														 lastFromPosition, lastToPosition,
+														 fromPosition, toPosition));
+					}
 					setTabTransition(lastToPosition, 1);
 				} else {
 					
@@ -491,8 +495,10 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 							setTabTransition(i, 1);
 							i += delta;
 						}
-						
-						Log.i("DSofter", "cont");
+
+						if (Log.isLoggable(TAG, Log.DEBUG)) {
+							Log.d(TAG, "cont");
+						}
 					}
 				}
 				
@@ -514,8 +520,10 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 		if (v instanceof TextView) {
 			((TextView) v).setTextColor(getTransitColor(
 					tabTextColor, tabTextColorSec, progress));
-			
-			Log.i("DSofter", position + ": " + progress);
+
+			if (Log.isLoggable(TAG, Log.DEBUG)) {
+				Log.d(TAG, position + ": " + progress);
+			}
 			
 			
 		} else if (v instanceof ImageButton) {
@@ -699,8 +707,10 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 		super.onRestoreInstanceState(savedState.getSuperState());
 		currentPosition = savedState.currentPosition;
 		requestLayout();
-		
-		Log.i("DSofter", "current pos: " + currentPosition);
+
+		if (Log.isLoggable(TAG, Log.DEBUG)) {
+			Log.d(TAG, "current pos: " + currentPosition);
+		}
 		
 		updateTabStyles();
 	}
